@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoffeeCo.</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark sticky-header bg-dark-green">
+        <a class="navbar-brand" href="#">CoffeeCo.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <form class="form-inline" onsubmit="return searchProduct()">
+                <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero mt-3">
+        <video controls autoplay muted loop class="w-100">
+            <source src="Your STARBUCKS Coffee Whenever, Wherever.mp4" type="video/mp4">
+        </video>
+        <div class="overlay-buttons text-center" style="margin-top: 120px;">
+            <button class="btn btn-dark-green btn-order-now">Order Now</button>
+            <button class="btn btn-dark-green" onclick="window.location.href='menu.html'">Explore Menu</button>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="introduction text-center py-5 bg-burnt-orange text-white">
+        <div class="container">
+            <h2>Welcome to CoffeeCo.</h2>
+            <p class="intro-text">Discover the unique flavors and ambiance of our coffee shop.</p>
+            <div class="row">
+                <!-- Coffee Items -->
+                <div class="col-md-3">
+                    <div class="card product-card" id="caffe-americano">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190617_CaffeAmericano.jpg?impolicy=1by1_wide_topcrop_630" class="card-img-top lazyload" alt="Caffè Americano">
+                        <div class="card-body">
+                            <h5 class="card-title">Caffè Americano</h5>
+                            <p class="card-text" style="color: black;">Espresso shots topped with hot water for a light layer of crema.</p>
+                            <p class="card-price">$3.25</p>
+                            <a href="menu.html" class="btn btn-dark-green">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="caffe-latte">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190617_CaffeLatte.jpg?impolicy=1by1_wide_topcrop_630" class="card-img-top lazyload" alt="Caffè Latte">
+                        <div class="card-body">
+                            <h5 class="card-title">Caffè Latte</h5>
+                            <p class="card-text" style="color: black;">Rich espresso balanced with steamed milk and a light layer of foam.</p>
+                            <p class="card-price">$4.25</p>
+                            <a href="menu.html" class="btn btn-dark-green">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="cappuccino">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190617_Cappuccino.jpg?impolicy=1by1_wide_topcrop_630" class="card-img-top lazyload" alt="Cappuccino">
+                        <div class="card-body">
+                            <h5 class="card-title">Cappuccino</h5>
+                            <p class="card-text" style="color: black;">Dark, rich espresso under a smoothed and stretched layer of thick milk foam.</p>
+                            <p class="card-price">$4.45</p>
+                            <a href="menu.html" class="btn btn-dark-green">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="caramel-macchiato">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190617_CaramelMacchiato.jpg?impolicy=1by1_wide_topcrop_630" class="card-img-top lazyload" alt="Caramel Macchiato">
+                        <div class="card-body">
+                            <h5 class="card-title">Caramel Macchiato</h5>
+                            <p class="card-text" style="color: black;">Freshly steamed milk with vanilla-flavored syrup, marked with espresso and caramel drizzle.</p>
+                            <p class="card-price">$4.75</p>
+                            <a href="menu.html" class="btn btn-dark-green">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="flat-white">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20230406_FlatWhite.jpg?impolicy=1by1_wide_topcrop_630" class="card-img-top lazyload" alt="Flat White">
+                        <div class="card-body">
+                            <h5 class="card-title">Flat White</h5>
+                            <p class="card-text" style="color: black;">Smooth ristretto shots of espresso get the perfect amount of steamed whole milk.</p>
+                            <p class="card-price">$4.95</p>
+                            <a href="menu.html" class="btn btn-dark-green">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="caffe-mocha">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20220607_CaffeMocha.jpg?impolicy=1by1_wide_topcrop_630" class="card-img-top lazyload" alt="Caffè Mocha">
+                        <div class="card-body">
+                            <h5 class="card-title">Caffè Mocha</h5>
+                            <p class="card-text" style="color: black;">Espresso with bittersweet mocha sauce and steamed milk, topped with sweetened whipped cream.</p>
+                            <p class="card-price">$4.65</p>
+                            <a href="menu.html" class="btn btn-dark-green">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="white-chocolate-mocha">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/bev/SBX20190617_WhiteChocolateMocha.jpg?impolicy=1by1_wide_topcrop_630" class="card-img-top lazyload" alt="White Chocolate Mocha">
+                        <div class="card-body">
+                            <h5 class="card-title">White Chocolate Mocha</h5>
+                            <p class="card-text" style="color: black;">Espresso with white chocolate sauce and steamed milk, topped with sweetened whipped cream.</p>
+                            <p class="card-price">$4.95</p>
+                            <a href="menu.html" class="btn btn-dark-green">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="pumpkin-spice-latte">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/bev/PumpkinSpiceLatte.jpg?impolicy=1by1_wide_topcrop_630" class="card-img-top lazyload" alt="Pumpkin Spice Latte">
+                        <div class="card-body">
+                            <h5 class="card-title">Pumpkin Spice Latte</h5>
+                            <p class="card-text" style="color: black;">Espresso and steamed milk with pumpkin, cinnamon, nutmeg, and clove, topped with whipped cream and pumpkin pie spices.</p>
+                            <p class="card-price">$5.25</p>
+                            <a href="menu.html" class="btn btn-dark-green">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dessert Section -->
+    <section class="desserts text-center py-5 bg-pistachio-green text-white">
+        <div class="container">
+            <h2>Our Desserts</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card product-card" id="birthday-cake-pop">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/food/SBX20181129_BirthdayCakePop.jpg?impolicy=1by1_medium_630" class="card-img-top lazyload" alt="Birthday Cake Pop">
+                        <div class="card-body">
+                            <h5 class="card-title">Birthday Cake Pop</h5>
+                            <p class="card-text">Vanilla cake and icing, dipped in a pink chocolaty coating with white sprinkles.</p>
+                            <p class="card-price">$2.25</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="butter-croissant">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/food/SBX20210915_Croissant-onGreen.jpg?impolicy=1by1_medium_630" class="card-img-top lazyload" alt="Butter Croissant">
+                        <div class="card-body">
+                            <h5 class="card-title">Butter Croissant</h5>
+                            <p class="card-text">A flaky, buttery croissant that pairs perfectly with your coffee.</p>
+                            <p class="card-price">$2.95</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="cheese-danish">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/food/SBX20220125_CheeseDanish-onGreen.jpg?impolicy=1by1_medium_630" class="card-img-top lazyload" alt="Cheese Danish">
+                        <div class="card-body">
+                            <h5 class="card-title">Cheese Danish</h5>
+                            <p class="card-text">A flaky pastry with a sweet cream cheese filling.</p>
+                            <p class="card-price">$3.25</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="chocolate-chip-cookie">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/food/SBX20190129_ChocolateChipCookie.jpg?impolicy=1by1_medium_630" class="card-img-top lazyload" alt="Chocolate Chip Cookie">
+                        <div class="card-body">
+                            <h5 class="card-title">Chocolate Chip Cookie</h5>
+                            <p class="card-text">A classic cookie loaded with chocolate chunks.</p>
+                            <p class="card-price">$2.45</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="chocolate-croissant">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/food/SBX20220607_ChocolateCroissant-onGreen.jpg?impolicy=1by1_medium_630" class="card-img-top lazyload" alt="Chocolate Croissant">
+                        <div class="card-body">
+                            <h5 class="card-title">Chocolate Croissant</h5>
+                            <p class="card-text">A flaky croissant with a rich chocolate filling.</p>
+                            <p class="card-price">$3.45</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="cinnamon-roll">
+                        <img data-src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/CH-AT-MOP-Cinnamon-Swirl.jpeg" class="card-img-top lazyload" alt="Cinnamon Roll">
+                        <div class="card-body">
+                            <h5 class="card-title">Cinnamon Roll</h5>
+                            <p class="card-text">A classic cinnamon roll with a sweet icing drizzle.</p>
+                            <p class="card-price">$3.75</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="iced-lemon-loaf">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/food/SBX20190729_LemonLoaf.jpg?impolicy=1by1_medium_630" class="card-img-top lazyload" alt="Iced Lemon Loaf">
+                        <div class="card-body">
+                            <h5 class="card-title">Iced Lemon Loaf</h5>
+                            <p class="card-text">A moist lemon cake topped with a sweet icing.</p>
+                            <p class="card-price">$3.25</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="pumpkin-bread">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/food/SBX20190729_PumpkinBread.jpg?impolicy=1by1_medium_630" class="card-img-top lazyload" alt="Pumpkin Bread">
+                        <div class="card-body">
+                            <h5 class="card-title">Pumpkin Bread</h5>
+                            <p class="card-text">A moist, spiced pumpkin bread with pepitas.</p>
+                            <p class="card-price">$3.45</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Snack Section -->
+    <section class="snacks text-center py-5" style="background-color: #FAD7A0;">
+        <div class="container">
+            <h2>Our Snacks</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card product-card" id="protein-box">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/food/SBX20221206_EggsCheddarProteinBox_SUM_FAL.jpg?impolicy=1by1_medium_630" class="card-img-top lazyload" alt="Protein Box">
+                        <div class="card-body">
+                            <h5 class="card-title">Protein Box</h5>
+                            <p class="card-text">A balanced meal with cheese, fruit, and nuts.</p>
+                            <p class="card-price">$5.95</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="protein-bowl">
+                        <img data-src="https://www.tasteofhome.com/wp-content/uploads/2021/12/Chicken-and-Quinoa-Protein-Bowl-with-Black-Beans-and-Greens-via-starbucks.com_.jpg?fit=700%2C700" class="card-img-top lazyload" alt="Protein Bowl">
+                        <div class="card-body">
+                            <h5 class="card-title">Protein Bowl</h5>
+                            <p class="card-text">A hearty bowl with grains, veggies, and protein.</p>
+                            <p class="card-price">$6.95</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="chicken-wrap">
+                        <img data-src="https://www.digitalassets.starbucks.eu/sites/starbucks-medialibrary/files/Chicken-Caesar-Wrap-.jpeg" class="card-img-top lazyload" alt="Chicken Wrap">
+                        <div class="card-body">
+                            <h5 class="card-title">Chicken Wrap</h5>
+                            <p class="card-text">A delicious wrap with chicken, veggies, and sauce.</p>
+                            <p class="card-price">$5.95</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="hummus-box">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/food/1Chicken%20Hummus%20Protein%20Box.jpg?impolicy=1by1_medium_630" class="card-img-top lazyload" alt="Hummus Box">
+                        <div class="card-body">
+                            <h5 class="card-title">Hummus Box</h5>
+                            <p class="card-text">A healthy snack with hummus, veggies, and pita.</p>
+                            <p class="card-price">$4.95</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="almonds">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/food/SBX20190628_39278-Squirrel-ClassicAlmonds.jpg?impolicy=1by1_medium_630" class="card-img-top lazyload" alt="Almonds">
+                        <div class="card-body">
+                            <h5 class="card-title">Almonds</h5>
+                            <p class="card-text">A pack of roasted almonds for a quick snack.</p>
+                            <p class="card-price">$2.95</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="granola-bar">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/food/SBX20190628_ThisBarSavesLives_DarkChocolate_PBSeaSaltBar.jpg?impolicy=1by1_medium_630" class="card-img-top lazyload" alt="Granola Bar">
+                        <div class="card-body">
+                            <h5 class="card-title">Granola Bar</h5>
+                            <p class="card-text">A healthy granola bar with dark chocolate and sea salt.</p>
+                            <p class="card-price">$2.95</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="dark-chocolate-peanut-butter-cups">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/food/SBX20190628_Justins_DarkChocolatePeanutButterCups.jpg?impolicy=1by1_medium_630" class="card-img-top lazyload" alt="Dark Chocolate Peanut Butter Cups">
+                        <div class="card-body">
+                            <h5 class="card-title">Dark Chocolate Peanut Butter Cups</h5>
+                            <p class="card-text">Rich dark chocolate cups filled with creamy peanut butter.</p>
+                            <p class="card-price">$5.95</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card product-card" id="skinnydipped-dark-chocolate-cocoa-almonds">
+                        <img data-src="https://globalassets.starbucks.com/digitalassets/products/food/SkinnyDippedAlmondsDarkChocolate.jpg?impolicy=1by1_medium_630" class="card-img-top lazyload" alt="SkinnyDipped Dark Chocolate Cocoa Almonds">
+                        <div class="card-body">
+                            <h5 class="card-title">SkinnyDipped Dark Chocolate Cocoa Almonds</h5>
+                            <p class="card-text">Almonds dipped in a thin layer of dark chocolate and dusted with cocoa.</p>
+                            <p class="card-price">$6.95</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials text-center py-5" style="background-color: lightcoral; color: black;">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p>"Best coffee in town!" - John Doe</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>"Amazing ambiance and great service." - Jane Smith</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>"A perfect place to relax and enjoy a cup of coffee." - Michael Brown</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>"The desserts are to die for!" - Emily Davis</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>"Friendly staff and cozy environment." - Chris Wilson</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>"I love their seasonal specials." - Sarah Johnson</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>"Great place to catch up with friends." - David Martinez</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>"The coffee is always fresh and delicious." - Laura Lee</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>"A must-visit for coffee lovers." - James Anderson</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>"Their pastries are the best!" - Maria Garcia</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <div class="social-media mb-3">
+                <a href="#" class="text-white mx-2">Facebook</a>
+                <a href="#" class="text-white mx-2">Twitter</a>
+                <a href="#" class="text-white mx-2">Instagram</a>
+            </div>
+            <div class="quick-links mb-3">
+                <a href="#" class="text-white mx-2">Privacy Policy</a>
+                <a href="#" class="text-white mx-2">Terms of Service</a>
+                <a href="#" class="text-white mx-2">Contact Us</a>
+            </div>
+            <div class="newsletter-signup mb-3">
+                <input type="email" class="form-control mb-2" placeholder="Subscribe to our newsletter">
+                <button class="btn btn-primary">Subscribe</button>
+            </div>
+            <p>2024 CoffeeCo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

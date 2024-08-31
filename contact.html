@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CoffeeCo.</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark-green sticky-header">
+        <a class="navbar-brand" href="#">CoffeeCo.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <form class="form-inline" onsubmit="return searchProduct()">
+                <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero mt-3">
+        <img src="https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg?cs=srgb&dl=pexels-pixabay-374885.jpg&fm=jpg" class="w-100" alt="Coffee Shop">
+        <div class="overlay text-center">
+            <h1>Get in Touch</h1>
+            <button class="btn btn-primary" onclick="scrollToSection('contact-info')">Contact Us</button>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section id="contact-info" class="contact-info text-center py-5 light-brown-bg">
+        <div class="container">
+            <h2>Our Location</h2>
+            <p>123 Coffee Street, Coffee City, CO 12345</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: contact@coffeeshop.com</p>
+            <p>Operating Hours: Mon - Fri: 7am - 7pm, Sat - Sun: 8am - 5pm</p>
+        </div>
+    </section>
+
+    <!-- Google Map Integration -->
+    <section class="map py-5" style="background-color: #f7f7f7;">
+        <div class="container">
+            <h2 class="text-center">Find Us Here</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086509374634!2d-122.419415484681!3d37.77492927975995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064d0a1b1b1%3A0x4a0b0c0b0b0b0b0b!2sCoffee%20Shop!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="contact-form text-center py-5" style="background-color: #D2B48C;">
+        <div class="container">
+            <h2>Send Us a Message</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark-green">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section id="cta" class="cta text-center py-5" style="background-color: #FFF5E1;">
+        <div class="container">
+            <h2>Have questions? Visit us or give us a call!</h2>
+            <button class="btn btn-dark-green text-white" onclick="window.location.href='tel:+11234567890'">Call Us</button>
+            <button class="btn btn-dark-green text-white" onclick="window.location.href='https://www.google.com/maps?q=123+Coffee+Street,+Coffee+City,+CO+12345'">Visit Us</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <div class="social-media mb-3">
+                <a href="#" class="text-white mx-2">Facebook</a>
+                <a href="#" class="text-white mx-2">Twitter</a>
+                <a href="#" class="text-white mx-2">Instagram</a>
+            </div>
+            <div class="quick-links mb-3">
+                <a href="#" class="text-white mx-2">Privacy Policy</a>
+                <a href="#" class="text-white mx-2">Terms of Service</a>
+                <a href="#" class="text-white mx-2">Contact Us</a>
+            </div>
+            <div class="newsletter-signup mb-3">
+                <input type="email" class="form-control mb-2" placeholder="Subscribe to our newsletter">
+                <button class="btn btn-primary">Subscribe</button>
+            </div>
+            <p>2024 CoffeeCo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

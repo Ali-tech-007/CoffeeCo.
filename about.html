@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CoffeeCo.</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark-green sticky-header">
+        <a class="navbar-brand" href="#">CoffeeCo.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <form class="form-inline" onsubmit="return searchProduct()">
+                <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero mt-3">
+        <img src="https://images.pexels.com/photos/683039/pexels-photo-683039.jpeg?cs=srgb&dl=pexels-apgpotr-683039.jpg&fm=jpg" class="w-100" alt="Coffee Shop Atmosphere">
+        </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="introduction text-center py-5">
+        <div class="container">
+            <h2>Welcome to CoffeeCo.</h2>
+            <p>At CoffeeCo., we are passionate about providing the best coffee experience. Our mission is to create a welcoming space where you can enjoy high-quality coffee and connect with others.</p>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story py-5">
+        <div class="container">
+            <h2>The Journey</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Our story began in 2010 with a simple idea: to create a place where people can come together and enjoy great coffee. Over the years, we have grown and evolved, but our commitment to quality and community remains the same.
+
+                        In those early days, we started as a small, neighborhood coffee shop with a handful of dedicated staff and a passion for delivering exceptional coffee experiences. We sourced our beans from local farmers, ensuring that every cup we served was not only fresh but also supported sustainable practices. Our focus was on crafting each coffee with care, whether it was a classic espresso or a unique, seasonal brew.
+                        
+                        As word spread about our little shop, we began to see familiar faces returning day after day. Our customers weren't just looking for a quick caffeine fix—they were seeking a place to relax, to connect, and to be part of something more. This sense of community became the heart of our business Today, our journey continues. We're still that neighborhood coffee shop at heart, but with a global vision. We're committed to sustainability, working towards becoming a zero-waste business by 2025. We're expanding our reach, exploring new markets, and sharing our passion for coffee with more people than ever before. But no matter how much we grow, one thing will never change: our dedication to providing a place where everyone is welcome, where coffee is crafted with love, and where community is at the core of everything we do.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://d2w1ef2ao9g8r9.cloudfront.net/otl-images/_1600x1057_crop_center-center_82_line/Coffee-Shop-Licenses-and-Permits.jpg" class="img-fluid" alt="Our Story">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ambiance & Unique Offerings Section -->
+    <section id="ambiance" class="ambiance py-5" style="background-color: #6C2E1F; color: white;">
+        <div class="container">
+            <h2>Experience the Ambiance</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://i.ytimg.com/vi/h-PfBxoMq_4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBfR2wkfvRYyxNS8GiZaNWACm0JWA" class="img-fluid" alt="Ambiance">
+                </div>
+                <div class="col-md-6">
+                    <p>Our coffee shop is designed to be a cozy and inviting space where you can relax and enjoy your coffee. From our comfortable seating to our carefully curated music playlist, every detail is meant to enhance your experience.</p>
+                    <p>We also offer a variety of unique offerings, including specialty brews, live music events, and more. Come and experience the ambiance for yourself!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section id="cta" class="cta text-center py-5" style="background-color: #FFF5E1;">
+        <div class="container">
+            <h2>Join Our Community</h2>
+            <p>Visit us, join our loyalty program, or follow us on social media to stay updated on our latest offerings and events.</p>
+            <button class="btn btn-dark-green text-white">Visit Us</button>
+            <button class="btn btn-dark-green text-white">Join Our Loyalty Program</button>
+            <button class="btn btn-dark-green text-white">Follow Us</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <div class="social-media mb-3">
+                <a href="#" class="text-white mx-2">Facebook</a>
+                <a href="#" class="text-white mx-2">Twitter</a>
+                <a href="#" class="text-white mx-2">Instagram</a>
+            </div>
+            <div class="quick-links mb-3">
+                <a href="#" class="text-white mx-2">Privacy Policy</a>
+                <a href="#" class="text-white mx-2">Terms of Service</a>
+                <a href="#" class="text-white mx-2">Contact Us</a>
+            </div>
+            <div class="newsletter-signup mb-3">
+                <input type="email" class="form-control mb-2" placeholder="Subscribe to our newsletter">
+                <button class="btn btn-primary">Subscribe</button>
+            </div>
+            <p>2024 CoffeeCo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,468 @@
+/* Basic styles for the Coffee Shop homepage */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: green;
+    color: beige;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.search-bar input {
+    padding: 5px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.overlay button {
+    padding: 10px 20px;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+}
+
+.introduction, .menu-preview, .promotions, .testimonials, footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.featured-products, .category, .testimonial {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Added to handle multiple items */
+}
+
+.product, .category, .testimonial {
+    text-align: center;
+    flex: 1 1 200px; /* Added to handle multiple items */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.newsletter-signup input {
+    padding: 5px;
+}
+
+.newsletter-signup button {
+    padding: 5px 10px;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+}
+
+/* Additional custom styles for the Coffee Shop homepage */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin-top: 20px; /* Added margin-top to create space */
+}
+
+.hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Changed from cover to contain */
+}
+
+.overlay-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+}
+
+.overlay-buttons button {
+    padding: 10px 20px;
+}
+
+.introduction, .desserts, .snacks, .menu-preview, .promotions, .testimonials, footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px; /* Adjust the value as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card img {
+    border-bottom: 2px solid #006400; /* Dark green border */
+}
+
+.product-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.product-card .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #006400; /* Dark green color */
+}
+
+.product-card .card-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.product-card .card-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #CC5500; /* Burnt orange color */
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom styles for the header */
+.bg-dark-green {
+    background-color: #006400 !important; /* Dark green color */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff; /* White text color */
+}
+
+.btn-dark-green {
+    background-color: #006400; /* Dark green color */
+    color: white; /* White text */
+    border: none;
+}
+
+.btn-dark-green:hover {
+    background-color: #004d00; /* Darker green on hover */
+}
+
+/* Burnt orange background for coffee section */
+.bg-burnt-orange {
+    background-color: #cc5500 !important; /* Example burnt orange color */
+}
+
+/* Dark brown text color for coffee section */
+.text-dark-brown {
+    color: #3E2723; /* Dark brown color */
+}
+
+/* Specific text color for <p> elements in coffee section */
+.introduction p {
+    color: #3E2723; /* Dark brown color */
+}
+
+.intro-text {
+    color: white !important;
+}
+
+.card-text {
+    color: #3E2723; /* Dark brown color */
+}
+
+.card-price {
+    color: #CC5500; /* Burnt orange color */
+}
+
+.introduction .intro-text {
+    color: white;
+}
+
+.card-text {
+    color: #3E2723; /* Dark brown color */
+}
+
+.card-price {
+    color: #CC5500; /* Burnt orange color */
+}
+
+.introduction .intro-text {
+    color: white;
+}
+
+.desserts {
+    background-color: beige;
+}
+
+.desserts h2 {
+    color: darkgreen;
+    margin-bottom: 12px;
+}
+
+.bg-olive-green {
+    background-color: #808000; /* Olive green color */
+}
+
+.dark-chocolate-peanut-butter-cups .card-body,
+.skinnydipped-dark-chocolate-cocoa-almonds .card-body {
+    padding-bottom: 10px; /* Adjust the value as needed */
+}
+
+/* Ensure all product cards have the same height */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Specific padding for Dark Chocolate Peanut Butter Cups and SkinnyDipped Dark Chocolate Cocoa Almonds */
+.dark-chocolate-peanut-butter-cups .card-body,
+.skinnydipped-dark-chocolate-cocoa-almonds .card-body {
+    padding-bottom: 10px; /* Adjust the value as needed */
+}
+
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #004d00; /* Dark green background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loading-screen .loading-content {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#loading-screen .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+
+#loading-screen .brand-name {
+    font-size: 2rem;
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.bg-dark-green {
+    background-color: #004d00; /* Dark green background */
+}
+
+.bg-burnt-orange {
+    background-color: #cc5500; /* Example burnt orange color */
+}
+
+.bg-pistachio-green {
+    background-color: #93c572; /* Pistachio green background */
+}
+
+.bg-olive-green {
+    background-color: #556b2f; /* Olive green background */
+}
+
+.product-card .card-price {
+    font-weight: bold;
+    color: #004d00; /* Dark green text */
+}
+
+.lazyload {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.lazyload.loaded {
+    opacity: 1;
+}
+
+/* Add this media query to hide the "Order Now" button on mobile devices */
+@media (max-width: 767.98px) {
+    .btn-order-now {
+        display: none;
+    }
+}
+
+/* Custom styles for category buttons */
+.nav-tabs .nav-link {
+    background-color: #006400; /* Dark green background */
+    color: white; /* White text */
+    border-radius: 5px; /* Border radius */
+    margin: 0 5px; /* Space between buttons */
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #004d00; /* Darker green for active tab */
+    color: white; /* White text */
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #004d00; /* Darker green on hover */
+    color: white; /* White text */
+}
+
+/* Add margin to the bottom of the category buttons */
+.nav-tabs {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+/* Background and text colors for each section */
+.bg-coffee {
+    background-color: #f5f5dc; /* Beige for coffee section */
+    color: black; /* Black text */
+}
+
+.bg-desserts {
+    background-color: #90ee90; /* Light green for desserts section */
+    color: white; /* White text */
+}
+
+.bg-snacks {
+    background-color: #deb887; /* Burlywood for snacks section */
+    color: black; /* Black text */
+}
+
+/* Ensure text color is applied to all elements */
+body.bg-coffee, body.bg-desserts, body.bg-snacks {
+    color: inherit;
+}
+
+body.bg-desserts .card-body, body.bg-desserts .card-title, body.bg-desserts .card-text, body.bg-desserts .card-price,
+body.bg-snacks .card-body, body.bg-snacks .card-title, body.bg-snacks .card-text, body.bg-snacks .card-price {
+    color: inherit;
+}
+
+/* Sticky header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #006400; /* Dark green background */
+    color: white; /* White text */
+}
+
+/* Style for the search button */
+.btn-outline-success {
+    color: white; /* White text */
+    border-color: white; /* White border */
+}
+
+.btn-outline-success:hover {
+    background-color: white; /* White background on hover */
+    color: #006400; /* Dark green text on hover */
+}
+
+/* Hide the search button on mobile devices */
+@media (max-width: 767.98px) {
+    .form-inline {
+        display: none;
+    }
+}
+
+.introduction {
+    background-color: darkgreen;
+    color: white;
+}
+
+.introduction p {
+    color: white;
+}
+
+.story {
+    background-color: #b1946c; /* Warm Taupe */
+}
+
+.ambiance {
+    background-color: #6e0b14; /* Deep Burgundy */
+}
+
+.bg-coffee p {
+    color: black !important; /* Black text for <p> elements in the coffee section */
+}
+
+.light-brown-bg {
+    background-color: #D2B48C;
+}
